@@ -24,15 +24,14 @@ class UserItemViewCell: UICollectionViewCell {
     
     func setupViews(data: UserModel?, indexPath: IndexPath) {
         if let _data = data {
-            self.icon?.image = UIImage(named: "ic_user")
-//            self.icon?.sd_setImage(with: URL(string: _data.avatarUrl), placeholderImage: UIImage(named: "ic_user"))
+            self.icon?.sd_setImage(with: URL(string: _data.avatarUrl), placeholderImage: UIImage(named: "ic_user"))
             self.name?.text = _data.name
             
-            if _data.title.isEmpty {
+            if _data.isAdmin == false {
                 self.titleHeightConst?.constant = 0
             } else {
                 self.titleHeightConst?.constant = 32
-                self.title?.text = _data.title
+                self.title?.text = "STAFF"
                 self.titleContainer?.layer.cornerRadius = 16
                 self.title?.sizeToFit()
             }

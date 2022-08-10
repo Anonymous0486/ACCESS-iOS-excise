@@ -78,7 +78,10 @@ class LoginViewController: UIViewController {
                     let githubCode = requestURLString[range.upperBound...]
                     if let range = githubCode.range(of: "&state=") {
                         let githubCodeFinal = githubCode[..<range.lowerBound]
-                        githubRequestForAccessToken(authCode: String(githubCodeFinal))
+                        viewModel?.getAccessToken(authCode: String(githubCodeFinal),
+                                                  clientId: CLIENT_ID,
+                                                  clientSecret: CLIENT_SECRET,
+                                                  baseUrl: TOKENURL)
                         self.dismiss(animated: true, completion: nil)
                     }
                 }
@@ -86,28 +89,7 @@ class LoginViewController: UIViewController {
         }
     }
 
-    func githubRequestForAccessToken(authCode: String) {
-        let grantType = "authorization_code"
-
-        let postParams = "grant_type=" + grantType + "&code=" + authCode + "&client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET
-        let postData = postParams.data(using: String.Encoding.utf8)
-        let request = NSMutableURLRequest(url: URL(string: TOKENURL)!)
-        request.httpMethod = "POST"
-        request.httpBody = postData
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let task: URLSessionDataTask = session.dataTask(with: request as URLRequest) { [weak self] (data, response, _) -> Void in
-            let statusCode = (response as! HTTPURLResponse).statusCode
-            if statusCode == 200 {
-                let results = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [AnyHashable: Any]
-                let accessToken = results?["access_token"] as? String
-                print("GitHub Access Token: \(accessToken ?? "")")
-                self?.defaults.set(accessToken, forKey: LocalStorageKey.access_token)
-            }
-        }
-        
-        task.resume()
-    }
+    
     
     @objc func onCancel() {
         self.dismiss(animated: true, completion: nil)
@@ -119,7 +101,17 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewModelOutput {
-    
+    func didGetAccessToken(token: String?) {
+        if let _token = token {
+            DispatchQueue.main.async { [weak self] in
+                self?.defaults.set(_token, forKey: LocalStorageKey.access_token)
+                if let vc = UsersViewController.createViewController() {
+                    let navi = UINavigationController(rootViewController: vc)
+                    UIWindow.key?.rootViewController = navi
+                }
+            }
+        }
+    }
 }
 
 extension LoginViewController: WKNavigationDelegate {
@@ -141,5 +133,18 @@ extension LoginViewController {
         viewController.viewModel = viewModel
         
         return viewController
+    }
+    
+    class func presentAsRoot() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            return
+        }
+        
+        let viewModel = LoginViewModel()
+        viewModel.output = viewController
+        viewController.viewModel = viewModel
+        
+        UIWindow.key?.rootViewController = viewController
     }
 }

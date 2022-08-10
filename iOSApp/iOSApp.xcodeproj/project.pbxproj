@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D07794528A34D0F00BE3CC9 /* UserLoadingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07794428A34D0F00BE3CC9 /* UserLoadingViewCell.swift */; };
 		2D326C3028A1448C00ADABD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D326C2F28A1448C00ADABD2 /* AppDelegate.swift */; };
 		2D326C3228A1448C00ADABD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D326C3128A1448C00ADABD2 /* SceneDelegate.swift */; };
 		2D326C3928A1448E00ADABD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D326C3828A1448E00ADABD2 /* Assets.xcassets */; };
@@ -31,6 +32,13 @@
 		2D326C8428A1813C00ADABD2 /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D326C8128A1813C00ADABD2 /* UserDetail.storyboard */; };
 		2D326C8528A1813C00ADABD2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D326C8228A1813C00ADABD2 /* UserDetailViewController.swift */; };
 		2D326C8628A1813C00ADABD2 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D326C8328A1813C00ADABD2 /* UserDetailViewModel.swift */; };
+		2DF67D2D28A2C00800BD2F2C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D2C28A2C00800BD2F2C /* UserService.swift */; };
+		2DF67D2F28A2C44F00BD2F2C /* APIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D2E28A2C44F00BD2F2C /* APIGateway.swift */; };
+		2DF67D3228A2C91A00BD2F2C /* APIGateway+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D3128A2C91A00BD2F2C /* APIGateway+User.swift */; };
+		2DF67D3428A2CADB00BD2F2C /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D3328A2CADB00BD2F2C /* UserResponse.swift */; };
+		2DF67D3828A2D85200BD2F2C /* UserDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D3728A2D85200BD2F2C /* UserDetailViewCell.swift */; };
+		2DF67D3A28A2D90F00BD2F2C /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D3928A2D90F00BD2F2C /* UserDetailModel.swift */; };
+		2DF67D3C28A2DB9500BD2F2C /* DetailItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D3B28A2DB9500BD2F2C /* DetailItemModel.swift */; };
 		543F7DB57A1A76CA90D49507 /* Pods_iOSAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE2C93338C96AA939264482 /* Pods_iOSAppTests.framework */; };
 		A337ABE0358278ACF180A0A3 /* Pods_iOSApp_iOSAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEFFEB543E5F81D311B5DFF /* Pods_iOSApp_iOSAppUITests.framework */; };
 		B5E304350648772B03AC1855 /* Pods_iOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4A5402F29B137D11F185A8 /* Pods_iOSApp.framework */; };
@@ -57,6 +65,7 @@
 		1C18B1976BB252077573F8E6 /* Pods-iOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSApp.debug.xcconfig"; path = "Target Support Files/Pods-iOSApp/Pods-iOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1FEFFEB543E5F81D311B5DFF /* Pods_iOSApp_iOSAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSApp_iOSAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3A7FF306F0466E4FC27FB7 /* Pods-iOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSApp.release.xcconfig"; path = "Target Support Files/Pods-iOSApp/Pods-iOSApp.release.xcconfig"; sourceTree = "<group>"; };
+		2D07794428A34D0F00BE3CC9 /* UserLoadingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoadingViewCell.swift; sourceTree = "<group>"; };
 		2D326C2C28A1448C00ADABD2 /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D326C2F28A1448C00ADABD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D326C3128A1448C00ADABD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +94,13 @@
 		2D326C8128A1813C00ADABD2 /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
 		2D326C8228A1813C00ADABD2 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		2D326C8328A1813C00ADABD2 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		2DF67D2C28A2C00800BD2F2C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2DF67D2E28A2C44F00BD2F2C /* APIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGateway.swift; sourceTree = "<group>"; };
+		2DF67D3128A2C91A00BD2F2C /* APIGateway+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIGateway+User.swift"; sourceTree = "<group>"; };
+		2DF67D3328A2CADB00BD2F2C /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		2DF67D3728A2D85200BD2F2C /* UserDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewCell.swift; sourceTree = "<group>"; };
+		2DF67D3928A2D90F00BD2F2C /* UserDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
+		2DF67D3B28A2DB9500BD2F2C /* DetailItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemModel.swift; sourceTree = "<group>"; };
 		32ABDA9058DCC3130F76A635 /* Pods-iOSApp-iOSAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSApp-iOSAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSApp-iOSAppUITests/Pods-iOSApp-iOSAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34A072B645EC4415DB0CE3DC /* Pods-iOSAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAppTests.release.xcconfig"; path = "Target Support Files/Pods-iOSAppTests/Pods-iOSAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3CE2C93338C96AA939264482 /* Pods_iOSAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +162,7 @@
 		2D326C2E28A1448C00ADABD2 /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				2DF67D2B28A2BF9000BD2F2C /* APIGateway */,
 				2D326C8028A1812600ADABD2 /* Detail */,
 				2D326C7128A1641900ADABD2 /* Helper */,
 				2D326C6A28A1545A00ADABD2 /* Login */,
@@ -203,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				2D326C7C28A1690E00ADABD2 /* UserItemViewCell.swift */,
+				2D07794428A34D0F00BE3CC9 /* UserLoadingViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -230,11 +248,49 @@
 		2D326C8028A1812600ADABD2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				2DF67D3628A2D76100BD2F2C /* models */,
+				2DF67D3528A2D75700BD2F2C /* views */,
 				2D326C8128A1813C00ADABD2 /* UserDetail.storyboard */,
 				2D326C8228A1813C00ADABD2 /* UserDetailViewController.swift */,
 				2D326C8328A1813C00ADABD2 /* UserDetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		2DF67D2B28A2BF9000BD2F2C /* APIGateway */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67D3028A2C90B00BD2F2C /* User */,
+				2DF67D2C28A2C00800BD2F2C /* UserService.swift */,
+				2DF67D2E28A2C44F00BD2F2C /* APIGateway.swift */,
+			);
+			path = APIGateway;
+			sourceTree = "<group>";
+		};
+		2DF67D3028A2C90B00BD2F2C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67D3128A2C91A00BD2F2C /* APIGateway+User.swift */,
+				2DF67D3328A2CADB00BD2F2C /* UserResponse.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		2DF67D3528A2D75700BD2F2C /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67D3728A2D85200BD2F2C /* UserDetailViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		2DF67D3628A2D76100BD2F2C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67D3928A2D90F00BD2F2C /* UserDetailModel.swift */,
+				2DF67D3B28A2DB9500BD2F2C /* DetailItemModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		2E8A6B2D160FC8CA550DDDC2 /* Frameworks */ = {
@@ -502,18 +558,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D07794528A34D0F00BE3CC9 /* UserLoadingViewCell.swift in Sources */,
 				2D326C8528A1813C00ADABD2 /* UserDetailViewController.swift in Sources */,
 				2D326C6F28A1546C00ADABD2 /* LoginViewController.swift in Sources */,
 				2D326C6428A146DE00ADABD2 /* UsersViewController.swift in Sources */,
 				2D326C7D28A1690E00ADABD2 /* UserItemViewCell.swift in Sources */,
+				2DF67D2F28A2C44F00BD2F2C /* APIGateway.swift in Sources */,
 				2D326C7B28A167F200ADABD2 /* UIWindowExtensions.swift in Sources */,
 				2D326C3028A1448C00ADABD2 /* AppDelegate.swift in Sources */,
 				2D326C7928A1650F00ADABD2 /* LaunchScreenViewModel.swift in Sources */,
 				2D326C7328A1642A00ADABD2 /* Constant.swift in Sources */,
+				2DF67D3C28A2DB9500BD2F2C /* DetailItemModel.swift in Sources */,
 				2D326C3228A1448C00ADABD2 /* SceneDelegate.swift in Sources */,
 				2D326C6928A148EA00ADABD2 /* UserModel.swift in Sources */,
 				2D326C6528A146DE00ADABD2 /* UsersViewModel.swift in Sources */,
+				2DF67D3828A2D85200BD2F2C /* UserDetailViewCell.swift in Sources */,
 				2D326C7828A1650F00ADABD2 /* LaunchScreenViewController.swift in Sources */,
+				2DF67D3428A2CADB00BD2F2C /* UserResponse.swift in Sources */,
+				2DF67D2D28A2C00800BD2F2C /* UserService.swift in Sources */,
+				2DF67D3A28A2D90F00BD2F2C /* UserDetailModel.swift in Sources */,
+				2DF67D3228A2C91A00BD2F2C /* APIGateway+User.swift in Sources */,
 				2D326C8628A1813C00ADABD2 /* UserDetailViewModel.swift in Sources */,
 				2D326C7F28A16D8300ADABD2 /* StringExtensions.swift in Sources */,
 				2D326C7028A1546C00ADABD2 /* LoginViewModel.swift in Sources */,

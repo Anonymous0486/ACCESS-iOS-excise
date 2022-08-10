@@ -26,22 +26,13 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let vc = UsersViewController.createViewController() {
-            let navi = UINavigationController(rootViewController: vc)
-            UIWindow.key?.rootViewController = navi
-        }
-        
-        return
-        
-        if let _ = viewModel?.isLogedIn() {
+        if let isLoggedIn = viewModel?.isLogedIn(), isLoggedIn == true {
             if let vc = UsersViewController.createViewController() {
                 let navi = UINavigationController(rootViewController: vc)
                 UIWindow.key?.rootViewController = navi
             }
         } else {
-            if let vc = LoginViewController.createViewController() {
-                navigationController?.pushViewController(vc, animated: true)
-            }
+            LoginViewController.presentAsRoot()
         }
     }
 }

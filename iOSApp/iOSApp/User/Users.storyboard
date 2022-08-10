@@ -31,8 +31,32 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserItemViewCell" id="xNN-8f-oUp" customClass="UserItemViewCell" customModule="iOSApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserLoadingViewCell" id="ccD-4G-hg3" customClass="UserLoadingViewCell" customModule="iOSApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iAO-2c-J4g">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5qx-lG-TdZ">
+                                                    <rect key="frame" x="185" y="38.5" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="Hqe-hS-UGg"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Jvx-fC-EMK"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5qx-lG-TdZ" firstAttribute="centerY" secondItem="iAO-2c-J4g" secondAttribute="centerY" id="RN0-VE-Ypj"/>
+                                                <constraint firstItem="5qx-lG-TdZ" firstAttribute="centerX" secondItem="iAO-2c-J4g" secondAttribute="centerX" id="oYI-Rb-vCw"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="indicatorView" destination="5qx-lG-TdZ" id="zdx-KA-SDV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserItemViewCell" id="xNN-8f-oUp" customClass="UserItemViewCell" customModule="iOSApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="131" width="414" height="121"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7uq-Le-9rJ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
